@@ -1,8 +1,8 @@
 .svn
-*.xcodeproj/*.mode1v3
-*.xcodeproj/*.pbxuser
-*.xcodeproj/xcuserdata/
-*.xcodeproj/project.xcworkspace/
+*.mode1v3
+*.pbxuser
+xcuserdata/
+project.xcworkspace/
 .DS_Store
 *.swp
 
