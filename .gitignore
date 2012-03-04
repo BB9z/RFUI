@@ -1,0 +1,11 @@
+.svn
+*.mode1v3
+*.pbxuser
+xcuserdata/
+project.xcworkspace/
+.DS_Store
+*.swp
+
+RFKit
+RFKit/*
+
