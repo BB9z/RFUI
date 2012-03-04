@@ -1,8 +1,14 @@
 fdg
 dfdgfgf
 test
+dd
 
+<<<<<<< HEAD
 
 tjgjirigroig
 
 afgafg
+=======
+tjgjirigroig
+ff
+>>>>>>> 98db9896f58f7e81042d0613c0dcb52e99f754f3
