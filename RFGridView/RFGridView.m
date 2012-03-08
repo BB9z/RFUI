@@ -65,7 +65,6 @@
 		CGFloat mmarginHorizontal = MAX(marginLeft, marginRight);
 		CGFloat mmarginVertical = MAX(marginBottom, marginTop);
 		
-		
 		NSUInteger nCount = container_.subviews.count;
 		NSUInteger ixCol;
 		NSUInteger ixRow;
@@ -75,13 +74,12 @@
 			CGFloat vWidth = lastViewWidth;
 			NSUInteger nWidth = (vWidth-marginLeft-marginRight+mmarginVertical) / (subviewSize_.width+mmarginVertical);
 			
-			
 			for (int i=0; i<nCount; i++) {
 				tmp_view = [container_.subviews objectAtIndex:i];
 				ixCol = i%nWidth;
 				ixRow = i/nWidth;
 				tmp_view.frame = CGRectMake(marginLeft + ixCol*(swSubview+mmarginHorizontal), marginTop +  ixRow*(shSubview+mmarginHorizontal), swSubview, shSubview);
-				dout_rect(tmp_view.frame)
+				_dout_rect(tmp_view.frame)
 			}
 			[container_ resizeWidth:lastViewWidth height:(ixRow+1)*(subviewSize_.height+mmarginVertical)-mmarginVertical+marginTop+marginBottom];
 			self.contentSize = container_.bounds.size;
