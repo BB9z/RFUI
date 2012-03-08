@@ -2,45 +2,35 @@
 	RFUI
 	RFGridView
 	
-	ver 0.0.0
+	ver 0.1.0
  */
 #import "RFUI.h"
 
-
 @interface RFGridView : UIScrollView {
-	NSUInteger inExceptCount;
+	BOOL isSizeSet;
 	CGSize subviewSize_;
 	
-	CGFloat marginTop_;
-	CGFloat marginRight_;
-	CGFloat marginBottom_;
-	CGFloat marginLeft_;
-	
-	BOOL _isAfterSelfScrollLoaded;
-	BOOL isSizeSet;
+	RFMargin margin_;
 	
 	CGFloat lastViewWidth;
 	CGFloat lastViewHeight;
 	
-	UIView * container;
+	UIView * container_;
+	bool layoutFlag;
 }
 @property (nonatomic) RFUIOrientation orientation;
 @property (nonatomic) CGSize subviewSize;
-@property (nonatomic) CGFloat marginTop;
-@property (nonatomic) CGFloat marginRight;
-@property (nonatomic) CGFloat marginBottom;
-@property (nonatomic) CGFloat marginLeft;
-@property (readonly, nonatomic) UIView * container;
+@property (nonatomic) RFMargin margin;
+@property (nonatomic) BOOL layoutAnimated;
 
 /**
- The default implementation of this method does nothing.
  
- Subclasses can override this method as needed to perform additional initialization on this view were loaded.
  */
-- (void)viewDidLoad;
+@property (strong, nonatomic) UIView * container;
 
-- (void)setSubviewSize:(CGSize)aSubviewSize;
-- (void)setMargin:(CGFloat)margin;
-
+/**
+ Call this after you modify container's subview
+ */
+- (void)setNeedsLayout;
 @end
 
