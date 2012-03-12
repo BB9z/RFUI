@@ -110,22 +110,22 @@
 	if (aSubviewSize.width > 0 && aSubviewSize.height > 0) {
 		isSizeSet = YES;
 		subviewSize_ = aSubviewSize;
-		[self setNeedsLayout];
+		layoutFlag = YES;
 	}
 }
 
 - (void)setMargin:(RFMargin)newMargin {
 	if (!RFMarginEqualToMargin(margin_, newMargin)) {
 		margin_ = newMargin;
-		[self setNeedsLayout];
+		layoutFlag = YES;
 	}
 }
 
 - (void)setNeedsLayout {
 	if (!layoutFlag) {
 		layoutFlag = true;
-		[super setNeedsLayout];
 	}
+	[super setNeedsLayout];
 }
 
 @end
