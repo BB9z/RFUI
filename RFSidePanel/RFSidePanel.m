@@ -1,4 +1,5 @@
 #import "RFSidePanel.h"
+#import "RFConstants.h"
 
 static CGFloat kToggleAnimateDuration = 0.5f;
 

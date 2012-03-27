@@ -3,7 +3,7 @@
 
 @interface RFPageNavigator ()
 - (void)doSetupHolderWithIndex:(NSUInteger)index section:(NSUInteger)section;
-- (IBAction)onToggleButtonClicked:(id)sender;
+- (void)onToggleButtonClicked:(id)sender;
 @end
 
 @implementation RFPageNavigator
