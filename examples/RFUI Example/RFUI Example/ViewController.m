@@ -21,10 +21,10 @@
 //	[self.view addSubview:vcITT_.view];
 	NSArray * imgs = [NSArray arrayWithObjects:
 					  [UIImage resourceName:@"IMG_1184" ofType:@"jpg"],
-					  [UIImage resourceName:@"IMG_1231 w∑" ofType:@"jpg"],
-					  [UIImage resourceName:@"IMG_1184" ofType:@"jpg"],
-					  [UIImage resourceName:@"IMG_1184" ofType:@"jpg"],
-					  [UIImage resourceName:@"IMG_1184" ofType:@"jpg"],
+					  [UIImage resourceName:@"IMG_1231" ofType:@"jpg"],
+					  [UIImage resourceName:@"IMG_1242" ofType:@"jpg"],
+					  [UIImage resourceName:@"IMG_1244" ofType:@"jpg"],
+					  [UIImage resourceName:@"IMG_1175" ofType:@"jpg"],
 
 					  nil];
 	[vcITT_ setImagesWithUIImageArray:imgs];

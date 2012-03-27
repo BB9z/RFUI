@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D500B8E314F4F19400572346 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D500B8E214F4F19400572346 /* View1.xib */; };
-		D500B8E414F4F19400572346 /* View1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D500B8E214F4F19400572346 /* View1.xib */; };
-		D500B8E614F4F1A900572346 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D500B8E514F4F1A900572346 /* View2.xib */; };
-		D500B8E714F4F1A900572346 /* View2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D500B8E514F4F1A900572346 /* View2.xib */; };
 		D520C52514F78DAB00D2F63B /* TouchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D520C52414F78DAB00D2F63B /* TouchImage.m */; };
 		D562799314F3A29F006CE0E4 /* RFPageNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = D562799114F3A29F006CE0E4 /* RFPageNavigator.m */; };
 		D562799414F3A29F006CE0E4 /* RFPageNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = D562799114F3A29F006CE0E4 /* RFPageNavigator.m */; };
@@ -41,6 +37,12 @@
 		D58D55FD14F1DBF000166776 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58D55DE14F1DBF000166776 /* Foundation.framework */; };
 		D58D560514F1DBF000166776 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D58D560314F1DBF000166776 /* InfoPlist.strings */; };
 		D58D560814F1DBF000166776 /* RFUI_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D58D560714F1DBF000166776 /* RFUI_ExampleTests.m */; };
+		D593CC41151C0DFE00979729 /* NSObject+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D593CC37151C0DFE00979729 /* NSObject+RFKit.m */; };
+		D593CC42151C0DFE00979729 /* NSString+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D593CC39151C0DFE00979729 /* NSString+RFKit.m */; };
+		D593CC43151C0DFE00979729 /* UIButton+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D593CC3A151C0DFE00979729 /* UIButton+RFKit.m */; };
+		D593CC44151C0DFE00979729 /* UIColor+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D593CC3C151C0DFE00979729 /* UIColor+RFKit.m */; };
+		D593CC45151C0DFE00979729 /* UIImage+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D593CC3E151C0DFE00979729 /* UIImage+RFKit.m */; };
+		D593CC46151C0DFE00979729 /* UIView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D593CC40151C0DFE00979729 /* UIView+RFKit.m */; };
 		D5A9D73214F8807100427DB7 /* RFMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A9D73114F8807100427DB7 /* RFMath.m */; };
 		D5A9D73314F8807100427DB7 /* RFMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A9D73114F8807100427DB7 /* RFMath.m */; };
 		D5A9D73514F8AA7B00427DB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A9D73414F8AA7B00427DB7 /* QuartzCore.framework */; };
@@ -79,8 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D500B8E214F4F19400572346 /* View1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View1.xib; path = Recource/View1.xib; sourceTree = SOURCE_ROOT; };
-		D500B8E514F4F1A900572346 /* View2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View2.xib; path = Recource/View2.xib; sourceTree = SOURCE_ROOT; };
 		D520C52314F78DAB00D2F63B /* TouchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchImage.h; sourceTree = "<group>"; };
 		D520C52414F78DAB00D2F63B /* TouchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchImage.m; sourceTree = "<group>"; };
 		D562799014F3A29F006CE0E4 /* RFPageNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RFPageNavigator.h; path = ../../../RFPageRreviewNavigater/RFPageNavigator.h; sourceTree = "<group>"; };
@@ -112,6 +112,17 @@
 		D58D560414F1DBF000166776 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D58D560614F1DBF000166776 /* RFUI_ExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFUI_ExampleTests.h; sourceTree = "<group>"; };
 		D58D560714F1DBF000166776 /* RFUI_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RFUI_ExampleTests.m; sourceTree = "<group>"; };
+		D593CC36151C0DFE00979729 /* NSObject+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFKit.h"; sourceTree = "<group>"; };
+		D593CC37151C0DFE00979729 /* NSObject+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFKit.m"; sourceTree = "<group>"; };
+		D593CC38151C0DFE00979729 /* NSString+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RFKit.h"; sourceTree = "<group>"; };
+		D593CC39151C0DFE00979729 /* NSString+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RFKit.m"; sourceTree = "<group>"; };
+		D593CC3A151C0DFE00979729 /* UIButton+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RFKit.m"; sourceTree = "<group>"; };
+		D593CC3B151C0DFE00979729 /* UIColor+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RFKit.h"; sourceTree = "<group>"; };
+		D593CC3C151C0DFE00979729 /* UIColor+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RFKit.m"; sourceTree = "<group>"; };
+		D593CC3D151C0DFE00979729 /* UIImage+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RFKit.h"; sourceTree = "<group>"; };
+		D593CC3E151C0DFE00979729 /* UIImage+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RFKit.m"; sourceTree = "<group>"; };
+		D593CC3F151C0DFE00979729 /* UIView+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFKit.h"; sourceTree = "<group>"; };
+		D593CC40151C0DFE00979729 /* UIView+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFKit.m"; sourceTree = "<group>"; };
 		D5A9D72F14F87F4800427DB7 /* RFMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RFMath.h; path = ../../../RFKit/RFMath.h; sourceTree = "<group>"; };
 		D5A9D73114F8807100427DB7 /* RFMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RFMath.m; path = ../../../RFKit/RFMath.m; sourceTree = "<group>"; };
 		D5A9D73414F8AA7B00427DB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -123,7 +134,6 @@
 		D5EF23C714F1DFA3000EEB36 /* RFSidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSidePanel.h; sourceTree = "<group>"; };
 		D5EF23C814F1DFA3000EEB36 /* RFSidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSidePanel.m; sourceTree = "<group>"; };
 		D5EF23C914F1DFA3000EEB36 /* RFSidePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFSidePanel.xib; sourceTree = "<group>"; };
-		D5EF23E114F1E144000EEB36 /* RFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RFConstants.h; path = ../../../RFConstants.h; sourceTree = "<group>"; };
 		D5EF23E414F1E55D000EEB36 /* dout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dout.h; path = ../../../RFKit/dout.h; sourceTree = "<group>"; };
 		D5EF23E514F1E55D000EEB36 /* dout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = dout.m; path = ../../../RFKit/dout.m; sourceTree = "<group>"; };
 		D5EF23E914F1E55D000EEB36 /* RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RFKit.h; path = ../../../RFKit/RFKit.h; sourceTree = "<group>"; };
@@ -178,8 +188,6 @@
 				D56F884D14F202D1009D8F80 /* IMG_1231.jpg */,
 				D56F884E14F202D1009D8F80 /* IMG_1242.jpg */,
 				D56F884F14F202D1009D8F80 /* IMG_1244.jpg */,
-				D500B8E214F4F19400572346 /* View1.xib */,
-				D500B8E514F4F1A900572346 /* View2.xib */,
 			);
 			name = Recource;
 			path = ../../Image;
@@ -269,7 +277,6 @@
 		D58D561114F1DC7000166776 /* RFUI */ = {
 			isa = PBXGroup;
 			children = (
-				D5EF23E114F1E144000EEB36 /* RFConstants.h */,
 				D5EF23F514F1EDEB000EEB36 /* RFImageTimeTunnel */,
 				D562798514F369D8006CE0E4 /* RFPageRreviewNavigater */,
 				D5EF23C114F1DFA3000EEB36 /* RFSidePanel */,
@@ -281,6 +288,7 @@
 		D58D561214F1DC8200166776 /* RFKit */ = {
 			isa = PBXGroup;
 			children = (
+				D593CC35151C0DFE00979729 /* extension */,
 				D5EF23E414F1E55D000EEB36 /* dout.h */,
 				D5EF23E514F1E55D000EEB36 /* dout.m */,
 				D5EF23E914F1E55D000EEB36 /* RFKit.h */,
@@ -289,6 +297,25 @@
 				D5A9D73114F8807100427DB7 /* RFMath.m */,
 			);
 			name = RFKit;
+			sourceTree = "<group>";
+		};
+		D593CC35151C0DFE00979729 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				D593CC36151C0DFE00979729 /* NSObject+RFKit.h */,
+				D593CC37151C0DFE00979729 /* NSObject+RFKit.m */,
+				D593CC38151C0DFE00979729 /* NSString+RFKit.h */,
+				D593CC39151C0DFE00979729 /* NSString+RFKit.m */,
+				D593CC3A151C0DFE00979729 /* UIButton+RFKit.m */,
+				D593CC3B151C0DFE00979729 /* UIColor+RFKit.h */,
+				D593CC3C151C0DFE00979729 /* UIColor+RFKit.m */,
+				D593CC3D151C0DFE00979729 /* UIImage+RFKit.h */,
+				D593CC3E151C0DFE00979729 /* UIImage+RFKit.m */,
+				D593CC3F151C0DFE00979729 /* UIView+RFKit.h */,
+				D593CC40151C0DFE00979729 /* UIView+RFKit.m */,
+			);
+			name = extension;
+			path = ../../RFKit/extension;
 			sourceTree = "<group>";
 		};
 		D5EF23C114F1DFA3000EEB36 /* RFSidePanel */ = {
@@ -402,8 +429,6 @@
 				D56F885614F202D1009D8F80 /* IMG_1244.jpg in Resources */,
 				D56F885F14F241FA009D8F80 /* IMG_1175.jpg in Resources */,
 				D562799514F3A29F006CE0E4 /* RFPageNavigator.xib in Resources */,
-				D500B8E314F4F19400572346 /* View1.xib in Resources */,
-				D500B8E614F4F1A900572346 /* View2.xib in Resources */,
 				D578895B14FB7BF600722D54 /* Untitled-0.jpg in Resources */,
 				D578895C14FB7BF600722D54 /* Untitled-1.jpg in Resources */,
 			);
@@ -427,8 +452,6 @@
 				D56F885714F202D1009D8F80 /* IMG_1244.jpg in Resources */,
 				D56F886014F241FA009D8F80 /* IMG_1175.jpg in Resources */,
 				D562799614F3A29F006CE0E4 /* RFPageNavigator.xib in Resources */,
-				D500B8E414F4F19400572346 /* View1.xib in Resources */,
-				D500B8E714F4F1A900572346 /* View2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +488,12 @@
 				D562799314F3A29F006CE0E4 /* RFPageNavigator.m in Sources */,
 				D520C52514F78DAB00D2F63B /* TouchImage.m in Sources */,
 				D5A9D73214F8807100427DB7 /* RFMath.m in Sources */,
+				D593CC41151C0DFE00979729 /* NSObject+RFKit.m in Sources */,
+				D593CC42151C0DFE00979729 /* NSString+RFKit.m in Sources */,
+				D593CC43151C0DFE00979729 /* UIButton+RFKit.m in Sources */,
+				D593CC44151C0DFE00979729 /* UIColor+RFKit.m in Sources */,
+				D593CC45151C0DFE00979729 /* UIImage+RFKit.m in Sources */,
+				D593CC46151C0DFE00979729 /* UIView+RFKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +605,7 @@
 				INFOPLIST_FILE = "RFUI Example/RFUI Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6035374A-EB89-402B-9D6E-739CD771AAD7";
+				PROVISIONING_PROFILE = "23BDBC59-2059-4411-82F3-C0A8A0FD8144";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,13 +614,13 @@
 		D58D560D14F1DBF000166776 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jiuzhou zhao (MJ2XNPK8UG)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RFUI Example/RFUI Example-Prefix.pch";
 				INFOPLIST_FILE = "RFUI Example/RFUI Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "23BDBC59-2059-4411-82F3-C0A8A0FD8144";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
