@@ -73,7 +73,9 @@
 		if (self.orientation != RFUIOrientationHorizontal) {
 			CGFloat vWidth = lastViewWidth;
 			NSUInteger nWidth = (vWidth-marginLeft-marginRight+mmarginVertical) / (subviewSize_.width+mmarginVertical);
-			
+			if (nWidth == 0) {
+				nWidth = 1;
+			}
 			for (int i=0; i<nCount; i++) {
 				tmp_view = [container_.subviews objectAtIndex:i];
 				ixCol = i%nWidth;
@@ -87,7 +89,9 @@
 		else {
 			CGFloat vHeight = lastViewHeight;
 			NSUInteger nHeight = (vHeight-marginTop-marginBottom+mmarginVertical) / (subviewSize_.height+mmarginVertical);
-			
+			if (nHeight == 0) {
+				nHeight = 1;
+			}
 			for (int i=0; i<nCount; i++) {
 				tmp_view = [container_.subviews objectAtIndex:i];
 				ixRow = i%nHeight;
@@ -110,22 +114,22 @@
 	if (aSubviewSize.width > 0 && aSubviewSize.height > 0) {
 		isSizeSet = YES;
 		subviewSize_ = aSubviewSize;
-		[self setNeedsLayout];
+		layoutFlag = YES;
 	}
 }
 
 - (void)setMargin:(RFMargin)newMargin {
 	if (!RFMarginEqualToMargin(margin_, newMargin)) {
 		margin_ = newMargin;
-		[self setNeedsLayout];
+		layoutFlag = YES;
 	}
 }
 
 - (void)setNeedsLayout {
 	if (!layoutFlag) {
 		layoutFlag = true;
-		[super setNeedsLayout];
 	}
+	[super setNeedsLayout];
 }
 
 @end
