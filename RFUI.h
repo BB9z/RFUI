@@ -1,21 +1,32 @@
 /*!
- RFUI
+	RFUI
+ 
+	https://github.com/BB9z/RFUI
+ 
+	The MIT License
+	http://www.opensource.org/licenses/mit-license.php
 */
 
 #ifndef RFUI_h
 #define RFUI_h
 
 #if !defined(RF_INLINE)
-# if defined(CG_INLINE)
-#  define RF_INLINE CG_INLINE
-# elif defined(__cplusplus)
-#  define RF_INLINE static inline
-# elif defined(__GNUC__)
-#  define RF_INLINE static __inline__
-# else
-#  define RF_INLINE static
-# endif
+#	if defined(CG_INLINE)
+#		define RF_INLINE CG_INLINE
+#	elif defined(__cplusplus)
+#		define RF_INLINE static inline
+#	elif defined(__GNUC__)
+#		define RF_INLINE static __inline__
+#	else
+#		define RF_INLINE static
+#	endif
 #endif
+
+//#ifndef RFKit_h
+//# error This file needs RFKit, \
+//		please clone git@github.com:BB9z/RFKit.git \
+//		about RFKit: https://github.com/BB9z/RFKit
+//#endif
 
 typedef enum {
 	RFUIOrientationHorizontal = 0,
