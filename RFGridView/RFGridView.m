@@ -1,12 +1,16 @@
 #import "RFGridView.h"
 
+@interface RFGridView ()
+
+@end
+
 @implementation RFGridView
-@synthesize subviewSize, margin = margin_;
+@synthesize subviewSize = subviewSize_, margin = margin_;
 @synthesize orientation;
 @synthesize container = container_;
 @synthesize layoutAnimated;
 
-- (void)doAfterLoad {
+- (void)setup {
 	self.scrollEnabled = YES;
 	self.userInteractionEnabled = YES;
 	self.clipsToBounds = YES;
@@ -24,7 +28,8 @@
 - (id)initWithFrame:(CGRect)aRect {
 	self = [super initWithFrame:aRect];
 	if (self) {
-		[self doAfterLoad];
+        doutwork()
+		[self setup];
 	}
 	return self;
 }
@@ -32,9 +37,15 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
-		[self doAfterLoad];
+        doutwork()
+        self.layoutAnimated = YES;
+//		[self setup];
 	}
 	return self;
+}
+
+- (void)awakeFromNib {
+    doutwork()
 }
 
 #pragma mark -

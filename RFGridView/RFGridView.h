@@ -2,20 +2,16 @@
 	RFUI
 	RFGridView
 	
-	ver 0.2.0
+	ver 0.2.1
  */
 #import "RFUI.h"
 
 @interface RFGridView : UIScrollView {
 	BOOL isSizeSet;
-	CGSize subviewSize_;
-	
-	RFMargin margin_;
 	
 	CGFloat lastViewWidth;
 	CGFloat lastViewHeight;
-	
-	UIView * container_;
+
 	bool layoutFlag;
 }
 @property (nonatomic) RFUIOrientation orientation;
@@ -24,9 +20,9 @@
 @property (nonatomic) BOOL layoutAnimated;
 
 /**
- 
+    Views added to this view will layout as grid
  */
-@property (strong, nonatomic) UIView * container;
+@property (strong, nonatomic) IBOutlet UIView * container;
 
 /**
  Call this after you modify container's subview
