@@ -1,20 +1,17 @@
 /*!
 	RFUI SidePanel
-	ver 0.1.1
+	ver 0.2.0
  */
 
-#import <UIKit/UIKit.h>
+#import "RFKit.h"
 
 @interface RFSidePanel : UIViewController {
-	IBOutlet UIView * vMaster;
 	IBOutlet UIImageView * vBarBg;
 	IBOutlet UIButton * vBarButton;
-	
-	UIView * root_;
-	BOOL isShow_;
 }
-@property (nonatomic, retain) UIView * vMaster;
-@property (nonatomic, assign) UIView * root;
+
+@property (RF_STRONG, nonatomic) IBOutlet UIView * masterView;
+@property ( nonatomic, assign) IBOutlet UIView * root;
 @property (nonatomic, assign) BOOL isShow;
 
 - (id)initWithManagedView:(UIView *)root;

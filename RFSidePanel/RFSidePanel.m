@@ -1,11 +1,10 @@
 #import "RFSidePanel.h"
-#import "RFConstants.h"
 
 static CGFloat kToggleAnimateDuration = 0.5f;
 
 @implementation RFSidePanel
-@synthesize vMaster;
-@synthesize root = root_, isShow = isShow_;
+@synthesize masterView = _masterView;
+@synthesize root = _root, isShow = _isShow;
 
 - (id)initWithManagedView:(UIView *)root {
     self = [super initWithNibName:@"SidePanel" bundle:nil];
@@ -21,7 +20,7 @@ static CGFloat kToggleAnimateDuration = 0.5f;
 }
 
 - (void)show:(BOOL)animated {
-	if(isShow_) return;
+	if(_isShow) return;
 	
 	if(animated) {
 		[vBarButton setImage:[UIImage resourceName:@"SidePanel-off.active"] forState:UIControlStateNormal];
@@ -38,47 +37,47 @@ static CGFloat kToggleAnimateDuration = 0.5f;
 		[vBarButton setImage:[UIImage resourceName:@"SidePanel-on"] forState:UIControlStateNormal];
 		[vBarButton setImage:[UIImage resourceName:@"SidePanel-on.active"] forState:UIControlStateHighlighted];
 	}
-	isShow_ = YES;
+	_isShow = YES;
 }
 
 - (void)hide:(BOOL)animated {
-	if(!isShow_) return;
+	if(!_isShow) return;
 	
 	if(animated) {
 		[vBarButton setImage:[UIImage resourceName:@"SidePanel-on.active"] forState:UIControlStateNormal];
 		
 		[UIView animateWithDuration:kToggleAnimateDuration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-			[self.view moveToX:-vMaster.bounds.size.width Y:CGFLOAT_MAX];
+			[self.view moveToX:-_masterView.bounds.size.width Y:CGFLOAT_MAX];
 		} completion:^(BOOL finished) {
 			[vBarButton setImage:[UIImage resourceName:@"SidePanel-off"] forState:UIControlStateNormal];
 			[vBarButton setImage:[UIImage resourceName:@"SidePanel-off.active"] forState:UIControlStateHighlighted];
 		}];
 	}
 	else {
-		[self.view moveToX:-vMaster.bounds.size.width Y:CGFLOAT_MAX];
+		[self.view moveToX:-_masterView.bounds.size.width Y:CGFLOAT_MAX];
 		[vBarButton setImage:[UIImage resourceName:@"SidePanel-off"] forState:UIControlStateNormal];
 		[vBarButton setImage:[UIImage resourceName:@"SidePanel-off.active"] forState:UIControlStateHighlighted];
 	}
-	isShow_ = NO;
+	_isShow = NO;
 }
 
 - (BOOL)toggle {
-	if(isShow_) {
+	if(_isShow) {
 		[self hide:YES];
 	}
 	else {
 		[self show:YES];
 	}
-	return isShow_;
+	return _isShow;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self.vMaster addSubview:self.root];
+	[self.masterView addSubview:self.root];
 	
 	// 默认认为自己是展开的
-	isShow_ = true;
+	_isShow = true;
 	if (![[NSUserDefaults standardUserDefaults] boolForKey:@"RFSidePanel_isShow"]) {
 		[self hide:NO];
 	}
@@ -91,12 +90,12 @@ static CGFloat kToggleAnimateDuration = 0.5f;
 	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(show:)];
 	recognizer.direction = UISwipeGestureRecognizerDirectionRight;
 	[self.view addGestureRecognizer:recognizer];
-	[recognizer release];
+    RF_RELEASE_OBJ(recognizer)
 	
 	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(hide:)];
 	recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
 	[self.view addGestureRecognizer:recognizer];
-	[recognizer release];
+    RF_RELEASE_OBJ(recognizer)
 	
 	[vBarButton addTarget:self action:@selector(toggle) forControlEvents:UIControlEventTouchUpInside];
 	
@@ -104,13 +103,13 @@ static CGFloat kToggleAnimateDuration = 0.5f;
 }
 
 - (void)savePreferences {
-	[[NSUserDefaults standardUserDefaults] setBool:isShow_ forKey:@"RFSidePanel_isShow"];
+	[[NSUserDefaults standardUserDefaults] setBool:_isShow forKey:@"RFSidePanel_isShow"];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
 	self.root = nil;
-	self.vMaster = nil;
+	self.masterView = nil;
 	[RFKit rls:vBarBg, vBarButton];
 }
 
