@@ -28,7 +28,7 @@
 - (id)initWithFrame:(CGRect)aRect {
 	self = [super initWithFrame:aRect];
 	if (self) {
-        doutwork()
+        _doutwork()
 		[self setup];
 	}
 	return self;
@@ -37,7 +37,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
-        doutwork()
+        _doutwork()
         self.layoutAnimated = YES;
 //		[self setup];
 	}
@@ -45,7 +45,7 @@
 }
 
 - (void)awakeFromNib {
-    doutwork()
+    _doutwork()
 }
 
 #pragma mark -
