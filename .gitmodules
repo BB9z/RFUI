@@ -1,3 +1,3 @@
 [submodule "RFKit"]
 	path = RFKit
-	url = git@github.com:BB9z/RFKit.git
+url=https://github.com/BB9z/RFKit.git
