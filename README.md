@@ -1,7 +1,6 @@
 #RFUI
-##To be a useful library for daily iOS develop
 ---------
-
+To be continue...
 
 
 
